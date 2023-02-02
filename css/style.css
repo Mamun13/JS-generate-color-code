@@ -1,0 +1,26 @@
+.first{
+  /* width: 200px; */
+  height: 300px;
+  background-color: rgb(247, 247, 247);
+  
+}
+.genaratehexcolor{
+  position: relative;
+}
+.hex-color{
+  height: 230px;
+  background-color: rgb(189, 175, 175);
+}
+.refresh-btn{
+  position: fixed;
+  left: 50%;
+  bottom: 4%;
+  transform: translate(-50%);
+  transition: all linear 0.3s;
+}
+.refresh-btn:hover{
+  background-color: aqua;
+}
+.title-text{
+  text-shadow:  0 0 1em blue, 0 0 0.2em blue;
+}
