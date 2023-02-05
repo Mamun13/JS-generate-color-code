@@ -17,8 +17,18 @@ const generateHexColor = () => {
                           <div class="hex-color-code text-center text-uppercase mt-2">${randomHex}</div>
                         </div>
                       </div>`;
+    color.addEventListener('click', ()=>copyColor(color, randomHex));
 		show.appendChild(color);
 	}
 };
 generateHexColor();
+
+const copyColor = (elem, randomHexVal) =>{
+  const colorElem =  elem.querySelector(".hex-color-code");
+
+  navigator.clipboard.writeText(randomHexVal).then(()=>{
+    colorElem.innerText = "copied";
+    setTimeout(()=> colorElem.innerText = randomHexVal, 1000)
+  })
+}
 refreshPage.addEventListener('click', generateHexColor);
